@@ -14,6 +14,93 @@ html {
     -webkit-text-size-adjust: 100%;
     scroll-behavior: smooth;
 }
+
+
+
+@import url("https://fonts.googleapis.com/css?family=Montserrat:900");
+
+[data-cursor] {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(
+    120deg,
+    #ff1744,
+    #e040fb,
+    #2979ff,
+    #00e5ff,
+    #76ff03
+  );
+  background-size: 1600% 1600%;
+  mix-blend-mode: difference;
+  pointer-events: none;
+  z-index: 50;
+  transition: 0.15s linear;
+  animation: blobRadius 5s ease infinite, blobBackground 15s ease infinite;
+}
+
+@keyframes blobRadius {
+  0%,
+  100% {
+    border-radius: 43% 77% 80% 40% / 40% 40% 80% 80%;
+  }
+  20% {
+    border-radius: 47% 73% 61% 59% / 47% 75% 45% 73%;
+  }
+  40% {
+    border-radius: 46% 74% 74% 46% / 74% 58% 62% 46%;
+  }
+  60% {
+    border-radius: 47% 73% 61% 59% / 40% 40% 80% 80%;
+  }
+  80% {
+    border-radius: 50% 70% 52% 68% / 51% 61% 59% 69%;
+  }
+}
+
+@keyframes blobBackground {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.cursor-hover--a [data-cursor] {
+  width: 100px;
+  height: 100px;
+}
+
+#blobstuff {
+  display: grid;
+  place-content: center;
+  height: 100vh;
+  background: #000;
+  font-family: "Montserrat", sans-serif;
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  a {
+    color: #fff;
+    cursor: pointer;
+    font-size: 2rem;
+    transition: 0.25s ease;
+    text-decoration: none;
+
+    &:hover {
+      transform: translateX(5px);
+    }
+  }
+}
+
+
+
+
 body {
     font-size: calc(1rem * var(--bfso, 1));
 }
@@ -704,8 +791,6 @@ html {
         grid-area: 20 / 4 / 21 / 20;
         position: relative;
     }
-    #wJ1AZ0WeYohzN2wQ {
-        font-size: max(calc(12px * var(--rfso, var(--bfso, 1))), calc(5.68888em - var(--ffsd)));
     }
     #MnQr09yd3rDzyIUd {
         --first-font-size: max(calc(12px * var(--rfso, var(--bfso, 1))), 5.68888em);
@@ -2323,9 +2408,6 @@ html {
         grid-area: 20 / 4 / 21 / 20;
         position: relative;
     }
-    #wJ1AZ0WeYohzN2wQ {
-        font-size: max(calc(12px * var(--rfso, var(--bfso, 1))), calc(4.4444375em - var(--ffsd)));
-    }
     #MnQr09yd3rDzyIUd {
         --first-font-size: max(calc(12px * var(--rfso, var(--bfso, 1))), 4.4444375em);
         --last-font-size: var(--first-font-size);
@@ -3942,9 +4024,6 @@ html {
         grid-area: 17 / 14 / 18 / 21;
         position: relative;
     }
-    #wJ1AZ0WeYohzN2wQ {
-        font-size: max(calc(12px * var(--rfso, var(--bfso, 1))), calc(2.77777344em - var(--ffsd)));
-    }
     #MnQr09yd3rDzyIUd {
         --first-font-size: max(calc(12px * var(--rfso, var(--bfso, 1))), 2.77777344em);
         --last-font-size: var(--first-font-size);
@@ -5560,9 +5639,6 @@ html {
     #JSXRTNFbLhtJiAJd {
         grid-area: 17 / 13 / 18 / 19;
         position: relative;
-    }
-    #wJ1AZ0WeYohzN2wQ {
-        font-size: max(calc(12px * var(--rfso, var(--bfso, 1))), calc(2.08333008em - var(--ffsd)));
     }
     #MnQr09yd3rDzyIUd {
         --first-font-size: max(calc(12px * var(--rfso, var(--bfso, 1))), 2.08333008em);
